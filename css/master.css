@@ -130,6 +130,15 @@ h3{
   margin: 0;
   line-height: 0.9;
 }
+h4{
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: 300;
+  border-bottom: 1px solid #111;
+  display: inline-block;
+  padding: 0.8rem 0;
+  margin: 0;
+}
 .content,.content-special{
   display: flex;
   align-items: center;
@@ -178,9 +187,8 @@ p{
   text-align: center;
 }
 .box.three{
-  -webkit-clip-path: polygon(7% 18%, 100% 6%, 97% 100%, 0% 91%);
-  clip-path: polygon(7% 18%, 100% 6%, 97% 100%, 0% 91%);
-  text-align: center;
+  -webkit-clip-path:polygon(0% 0%,100% 6%,97% 100%,0% 91%);
+  clip-path:polygon(0% 0%,100% 6%,97% 100%,0% 91%);
 }
 .box.four,.box.two{
   background: #000;
@@ -229,15 +237,24 @@ ul.tags li{
   font-size: 12px;
   font-weight: 300;
 }
-.images{
+.flex{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 15px;
+  margin-top: 25px;
 }
-.images img{
-  max-height: 100px;
-  margin: 1px 3px;
+.flex .element{
+  width: calc(33.33% - 30px);
+  margin: 0 15px;
+}
+.flex.center{
+  justify-content: center;
+}
+.flex img{
+  transform: rotate(3deg);
+  margin: 1px 8px;
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
 }
 @media all and (max-width:980px){
   h3{
@@ -246,14 +263,28 @@ ul.tags li{
   p{
     font-size: 14px;
   }
+  .box{
+    min-height: 90vh;
+  }
 }
 @media all and (max-width:680px){
   #center{
     min-width: 96vw;
     max-width: 100%;
-    min-height: 96vw;
+    min-height: 96vh;
     padding: 63px;
     box-sizing: border-box;
+  }
+  .flex,ul.tags{
+    justify-content: center;
+  }
+  .flex .element{
+    width: 100%;
+    margin: 10px 0;
+  }
+  h4{
+    font-size: 0.8rem;
+    padding: 0;
   }
   h2{
     font-size: 10.5px;
