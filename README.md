@@ -8,4 +8,4 @@ A HTML website template
 
 
 ### Credits
-Photo by Pierre Châtel-Innocenti on [Unsplash](https://unsplash.com/@chatelp)
+All photos by Pierre Châtel-Innocenti on [Unsplash](https://unsplash.com/@chatelp)
